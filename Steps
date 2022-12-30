@@ -1,4 +1,25 @@
 Import Exiting Infra with Terraform
+-----------------------------------------------------------------------------
+
+Terraform Import 
+
+It’s used to import exiting infrastructure with Terraform. Before doing be careful to check each block resource.
+Import command to find the existing resources ID & Resource Address and import to terraform state.
+
+Syntax:
+ terraform import <resource_type>.<resource_name> <id>  
+
+Steps:
+1.	Created EC2 instance for Amazon Linux and ubuntu
+2.	Create provider.tf like aws,azure,digitial ocean. Here am take AWS
+3.	created instance.tf with empty values for Image id & instance type
+4.	go to GUI and get instance id
+
+Excu Cmd:
+
+terraform import aws_instance.Importweb1 i-06db250dec95a9b55
+terraform import aws_instance.Importweb2 i-0b734d3c4677537c1
+
 
 
 
